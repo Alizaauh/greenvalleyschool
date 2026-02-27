@@ -1,0 +1,21 @@
+.about-hero {
+  background: linear-gradient(rgba(27, 67, 50, 0.78), rgba(27, 67, 50, 0.78)),
+              url("assets/f8f7b79b59d9b9c9a0c96c66c9b082dd.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 96px 0;
+}
+
+.pill {
+  border: 1px solid rgba(45, 106, 79, 0.2);
+  border-radius: 14px;
+  padding: 18px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  height: 100%;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1b4332;
+}

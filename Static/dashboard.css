@@ -1,0 +1,38 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #eef7f2 0%, #f8fbfa 50%, #ffffff 100%);
+}
+
+.dashboard-main .text-center h2 {
+  color: #1b4332;
+  letter-spacing: -0.4px;
+}
+
+.dashboard-main .text-center p {
+  color: #4f6b5f !important;
+}
+
+.dashboard-main .card {
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fcf9 100%);
+  box-shadow: 0 14px 28px rgba(23, 68, 51, 0.08) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dashboard-main .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 36px rgba(23, 68, 51, 0.14) !important;
+}
+
+.dashboard-main .card-title {
+  font-weight: 700;
+  color: #1b4332;
+}
+
+.dashboard-main .card-text {
+  color: #486255;
+}
+
+.dashboard-main .card-title i {
+  color: #2d6a4f !important;
+}

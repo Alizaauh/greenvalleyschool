@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academics | Green Valley School</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="icon" type="image/jpeg" href="{{ url_for('static', filename='assets/green valley school.jpg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='academics.css') }}">
+</head>
+<body>
+  <header class="bg-success text-white p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="h3 mb-0 d-flex align-items-center gap-2">
+        <img src="{{ url_for('static', filename='assets/green valley school.jpg') }}" alt="Green Valley School logo" class="site-logo">
+        <span>Green Valley School</span>
+      </h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('index') }}">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('aboutus') }}">About Us</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('academics') }}">Academics</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('admission') }}">Admission</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('login') }}">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="academics-hero">
+    <div class="container text-center">
+      <h2 class="display-5 fw-bold">Academics That Build Futures</h2>
+      <p class="lead mb-0">Structured learning, practical skills, and values-based education from primary to secondary levels.</p>
+    </div>
+  </section>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h3 class="fw-bold">Our Academic Programs</h3>
+        <div class="bar"></div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+          <article class="card-soft">
+            <i class="bi bi-book"></i>
+            <h4 class="h5 mt-3">Primary School</h4>
+            <p class="mb-0">Strong foundation in language, mathematics, science, and social skills with activity-based learning.</p>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <article class="card-soft">
+            <i class="bi bi-journal-check"></i>
+            <h4 class="h5 mt-3">Secondary School</h4>
+            <p class="mb-0">Comprehensive subject depth, exam preparation, and project work designed for confident progression.</p>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <article class="card-soft">
+            <i class="bi bi-lightbulb"></i>
+            <h4 class="h5 mt-3">Skills & Activities</h4>
+            <p class="mb-0">STEM clubs, arts, sports, and leadership opportunities to develop creativity and real-world skills.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <section class="card-soft">
+            <h4 class="h5">Teaching Approach</h4>
+            <p class="mb-0">Our teachers use interactive classrooms, regular assessments, and mentorship to support every student's learning pace.</p>
+          </section>
+        </div>
+        <div class="col-md-6">
+          <section class="card-soft">
+            <h4 class="h5">Assessment & Growth</h4>
+            <p class="mb-0">Continuous assessment, feedback-driven improvement, and parent-teacher collaboration keep progress clear and measurable.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <p class="mb-0">&copy; 2026 Green Valley School | All Rights Reserved</p>
+      <div class="d-flex gap-2">
+        <a class="text-dark" href="#"><i class="bi bi-instagram fs-5"></i></a>
+        <a class="text-dark" href="#"><i class="bi bi-facebook fs-5"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.academics-hero {
+  background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(27, 67, 50, 0.8)),
+              url("assets/f8f7b79b59d9b9c9a0c96c66c9b082dd.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 96px 0;
+}
+
+.card-soft {
+  border: 1px solid rgba(45, 106, 79, 0.18);
+  border-radius: 16px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.card-soft i {
+  font-size: 1.6rem;
+  color: #1b4332;
+}
+
+.bar {
+  width: 68px;
+  height: 4px;
+  background: #2d6a4f;
+  border-radius: 99px;
+  margin: 0.75rem auto 0;
+}

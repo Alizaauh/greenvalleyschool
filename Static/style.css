@@ -1,0 +1,248 @@
+/* ===== Google Fonts & Variables ===== */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary: #1b4332;      /* Deep Forest */
+  --secondary: #2d6a4f;    /* Classic Green */
+  --accent: #95d5b2;       /* Soft Mint */
+  --highlight: #ffdd00;    /* Sun Yellow */
+  --light-bg: #f8faf9;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: #2b2d42;
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ===== Header & Nav ===== */
+header {
+  background-color: var(--primary) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.site-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+  font-weight: 500;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--highlight) !important;
+  transform: translateY(-2px);
+}
+
+/* ===== Hero Section ===== */
+.bg-light.text-center.py-5 {
+  position: relative;
+  padding: 120px 0 !important;
+  background: linear-gradient(rgba(27, 67, 50, 0.7), rgba(27, 67, 50, 0.7)),
+              url('assets/f8f7b79b59d9b9c9a0c96c66c9b082dd.jpg') center/cover no-repeat;
+  color: white !important;
+}
+
+.bg-light h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* ===== About Section ===== */
+#about {
+  background: url('https://www.transparenttextures.com/patterns/leaf.png'); /* Subtle leaf pattern */
+}
+
+#about h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--secondary);
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+/* ===== Academics (Cards with Photos) ===== */
+#academics {
+  background-color: var(--light-bg) !important;
+}
+
+#academics .card {
+  border: none;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+}
+
+#academics .card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+/* Adding Images to Cards via pseudo-elements */
+.card::before {
+  content: "";
+  display: block;
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Card 1: Primary */
+.col-md-4:nth-child(1) .card::before {
+  background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop');
+}
+
+/* Card 2: Secondary */
+.col-md-4:nth-child(2) .card::before {
+  background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2104&auto=format&fit=crop');
+}
+
+/* Card 3: Activities */
+.col-md-4:nth-child(3) .card::before {
+  background-image: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop');
+}
+
+.card-title {
+  color: var(--primary);
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+/* ===== Contact Form ===== */
+.form-control {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px 20px;
+}
+
+.form-control:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 0.25rem rgba(45, 106, 79, 0.15);
+}
+
+.btn-success {
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 12px;
+  transition: background 0.3s;
+}
+
+.btn-success:hover {
+  background-color: var(--primary);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+}
+
+/* ===== Footer ===== */
+footer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f2f23 0%, #1b4332 55%, #2d6a4f 100%) !important;
+  color: #e9f8ef;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 20%, rgba(255, 221, 0, 0.2), transparent 35%);
+  pointer-events: none;
+}
+
+footer .container {
+  position: relative;
+  z-index: 1;
+}
+
+footer h5 {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+footer p,
+footer .text-body-secondary {
+  color: rgba(233, 248, 239, 0.9) !important;
+}
+
+footer .nav-link {
+  color: rgba(233, 248, 239, 0.88) !important;
+  margin: 0;
+  padding: 0.25rem 0 !important;
+}
+
+footer .nav-link:hover {
+  color: var(--highlight) !important;
+  transform: translateX(4px);
+}
+
+footer .border-top {
+  border-top-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+footer .form-control {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+footer .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+footer .form-control:focus {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: none;
+}
+
+footer .btn-primary {
+  background-color: var(--highlight);
+  color: #143224;
+  font-weight: 700;
+}
+
+footer .btn-primary:hover {
+  background-color: #ffe860;
+  color: #0f2f23;
+}
+
+footer .text-dark {
+  color: #ffffff !important;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+footer .text-dark:hover {
+  color: var(--highlight) !important;
+  border-color: var(--highlight);
+  transform: translateY(-3px);
+}
+
+.bi {
+  transition: color 0.3s;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Valley School</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="icon" type="image/jpeg" href="{{ url_for('static', filename='assets/green valley school.jpg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="bg-success text-white p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="h3 mb-0 d-flex align-items-center gap-2">
+        <img src="{{ url_for('static', filename='assets/green valley school.jpg') }}" alt="Green Valley School logo" class="site-logo">
+        <span>Green Valley School</span>
+      </h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('index') }}">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('aboutus') }}">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('academics') }}">Academics</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('admission') }}">Admission</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('login') }}">LogIn</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <div class="bg-light text-center py-5">
+    <div class="container">
+      <h2 class="fw-bold">Welcome to Green Valley School</h2>
+      <p class="lead">Shaping bright futures with quality education</p>
+      <a href="{{ url_for('admission') }}" class="btn btn-success btn-lg mt-3">Apply Now</a>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-3">About Us</h2>
+      <p>Green Valley School is committed to academic excellence, discipline, and creativity.</p>
+      <a href="{{ url_for('aboutus') }}" class="btn btn-outline-success mt-2">Read More</a>
+    </div>
+  </section>
+
+  <!-- ===== ACADEMICS ===== -->
+  <section id="academics" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Academics</h2>
+      <p class="text-center mb-4">Explore our complete academic programs, teaching approach, and student growth model.</p>
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Primary Level</h5>
+              <p class="card-text">Strong foundation in basic subjects.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Secondary Level</h5>
+              <p class="card-text">Advanced learning with practical knowledge.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Extra Activities</h5>
+              <p class="card-text">Sports, arts, and leadership programs.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center mt-4">
+        <a href="{{ url_for('academics') }}" class="btn btn-outline-success">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+
+      <form class="mx-auto" style="max-width:600px;" onsubmit="return showMessage()">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About Us</a></li>       
+          </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>&copy; 2026 Green Valley School | All Rights Reserved</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-dark" href="#"><i class="bi bi-instagram fs-4"></i></a>
+          </li>
+          <li class="ms-3">
+            <a class="text-dark" href="#"><i class="bi bi-facebook fs-4"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    function showMessage() {
+      alert("Thank you for contacting us!");
+      return false;
+    }
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
